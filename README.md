@@ -20,8 +20,8 @@ It supports both **user features** (login, content list, video playback, profile
 ---
 
 ## 🛠️ Tech Stack
-- **Node.js + Express** – REST API framework  
-- **MongoDB / PostgreSQL** – Database  
+- **Java + SpringBoot** – REST API framework  
+- **MySQL / PostgreSQL** – Database  
 - **JWT** – Authentication  
 - **Multer** – File uploads (thumbnails, videos)  
 
