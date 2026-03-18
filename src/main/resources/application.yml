@@ -1,0 +1,44 @@
+server:
+  port: 8080
+  address: 0.0.0.0
+  tomcat:
+    max-swallow-size: 2GB
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/video_streaming_new
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+  web:
+    resources:
+      static-locations: file:D:/stream_videos/
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 2GB
+      max-request-size: 2GB
+
+# Custom Properties
+app:
+  jwtSecret: "YourSuperSecretJWTKeyForStreamingDemoAppShouldBeLongEnough"
+  jwtExpirationMs: 86400000
+  uploadDir: "D:/stream_videos/"
+  ffmpegPath: "C:/ffmpeg/bin/ffmpeg.exe"
+  ffprobePath: "C:/ffmpeg/bin/ffprobe.exe"
+
+# PayPal Config (Placeholders)
+paypal:
+  clientId: "YOUR_PAYPAL_CLIENT_ID"
+  clientSecret: "YOUR_PAYPAL_CLIENT_SECRET"
+  mode: "sandbox"
