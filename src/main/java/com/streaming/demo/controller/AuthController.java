@@ -20,7 +20,6 @@ public class AuthController {
     public ResponseEntity<?> registerUser(@Valid @RequestBody RegisterRequest registerRequest) {
         try {
             Role role = Role.valueOf(registerRequest.getRole().toUpperCase());
-            
             authService.registerUser(registerRequest.getName(), registerRequest.getEmail(),
                     registerRequest.getMobileNo(), registerRequest.getPassword(), role);
             return ResponseEntity.ok(new MessageResponse("User registered successfully!"));

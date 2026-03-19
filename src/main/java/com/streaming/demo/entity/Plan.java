@@ -22,4 +22,5 @@ public class Plan {
     private double trialPrice;
     private int trialDurationDays;
     private boolean trialAvailable;
+    private String razorpayPlanId;
 }

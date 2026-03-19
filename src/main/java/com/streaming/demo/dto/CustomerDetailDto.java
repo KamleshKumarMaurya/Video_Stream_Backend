@@ -18,13 +18,14 @@ public class CustomerDetailDto {
     private String mobileNo;
     private boolean subscriptionActive;
     private boolean active;
+    private boolean isTrialPlanUsed;
     
     // Subscription Details
     private Long activePlanId;
     private String activePlanName;
     private LocalDateTime subscriptionStartDate;
     private LocalDateTime subscriptionExpiryDate;
-    
+    private boolean isNormalPlanActive;
     // Payment History
     private List<PaymentHistoryDto> paymentHistory;
 

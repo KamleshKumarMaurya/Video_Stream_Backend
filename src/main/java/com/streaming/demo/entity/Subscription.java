@@ -27,4 +27,8 @@ public class Subscription {
     private LocalDateTime startDate;
     private LocalDateTime expiryDate;
     private String paymentStatus;
+    private String razorpaySubscriptionId;
+    private boolean active;
+    @Builder.Default
+    private boolean isNormalPlanActive=false;
 }

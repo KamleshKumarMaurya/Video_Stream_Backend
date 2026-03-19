@@ -66,13 +66,15 @@ public class AdminCustomerService {
                 .email(user.getEmail())
                 .mobileNo(user.getMobileNo())
                 .subscriptionActive(user.isSubscriptionActive())
-                .active(user.isActive());
+                .active(user.isActive())
+                .isTrialPlanUsed(user.isTrialPlanUsed());
 
         if (latestSub != null) {
             builder.activePlanId(latestSub.getPlan().getId())
                     .activePlanName(latestSub.getPlan().getName())
                     .subscriptionStartDate(latestSub.getStartDate())
-                    .subscriptionExpiryDate(latestSub.getExpiryDate());
+                    .subscriptionExpiryDate(latestSub.getExpiryDate())
+                    .isNormalPlanActive(latestSub.isNormalPlanActive());
         }
 
         builder.paymentHistory(paymentRepository.findByUser(user).stream()
