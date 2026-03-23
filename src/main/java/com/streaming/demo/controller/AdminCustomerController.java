@@ -2,6 +2,7 @@ package com.streaming.demo.controller;
 
 import com.streaming.demo.dto.CustomerDetailDto;
 import com.streaming.demo.dto.MessageResponse;
+import com.streaming.demo.dto.UserDashboardResponse;
 import com.streaming.demo.service.AdminCustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -41,4 +42,11 @@ public class AdminCustomerController {
         adminCustomerService.toggleCustomerStatus(id, active);
         return ResponseEntity.ok(new MessageResponse("Customer status updated successfully"));
     }
+    
+    @GetMapping("/dashboard/users")
+    public ResponseEntity<UserDashboardResponse> getDashboard() {
+        return ResponseEntity.ok(adminCustomerService.getUserDashboard());
+    }
+    
+    
 }

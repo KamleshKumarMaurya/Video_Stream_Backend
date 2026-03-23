@@ -9,4 +9,5 @@ import java.util.Optional;
 public interface EpisodeRepository extends JpaRepository<Episode, Long> {
     List<Episode> findByStoryOrderByEpisodeNumberAsc(Story story);
     Optional<Episode> findByStoryAndEpisodeNumber(Story story, int episodeNumber);
+	boolean existsByStoryIdAndEpisodeNumber(Long storyId, int episodeNumber);
 }

@@ -14,7 +14,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
@@ -37,8 +37,7 @@ app:
   ffmpegPath: "C:/ffmpeg/bin/ffmpeg.exe"
   ffprobePath: "C:/ffmpeg/bin/ffprobe.exe"
 
-# PayPal Config (Placeholders)
-paypal:
-  clientId: "YOUR_PAYPAL_CLIENT_ID"
-  clientSecret: "YOUR_PAYPAL_CLIENT_SECRET"
-  mode: "sandbox"
+# Razorpay Config (Placeholders)
+razorpay:
+  keyId: rzp_test_SSzIUtL9AM7udj
+  keySecret: A42vVW5b1t7haAhAXIjcinp5

@@ -12,6 +12,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 @Service
 public class StoryService {
@@ -22,9 +24,10 @@ public class StoryService {
     @Value("${app.uploadDir}")
     private String uploadDir;
 
-    public Story createStory(String title, String description, MultipartFile thumbnailFile) throws IOException {
+    public Story createStory(String title, String description, MultipartFile thumbnailFile,boolean latest_story) throws IOException {
         Story story = Story.builder()
                 .title(title)
+                .latest_story(latest_story)    
                 .description(description)
                 .build();
         story = storyRepository.save(story);
