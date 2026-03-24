@@ -39,5 +39,5 @@ app:
 
 # Razorpay Config (Placeholders)
 razorpay:
-  keyId: rzp_test_SSzIUtL9AM7udj
-  keySecret: A42vVW5b1t7haAhAXIjcinp5
+  keyId: "KEY_ID"
+  keySecret: "KEY_SECRET"
